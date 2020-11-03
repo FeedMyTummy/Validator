@@ -7,5 +7,14 @@
 
 import Foundation
 
-print("Hello, World!")
+let password = "abcD2#"
 
+let passwordValidator = PasswordValidator()
+passwordValidator.validate(password: password) { result in
+    switch result {
+    case .success:
+        print("Valid")
+    case .failure(let error):
+        print("Error:", error)
+    }
+}
