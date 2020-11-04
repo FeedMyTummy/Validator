@@ -15,11 +15,11 @@ final class TextValidator {
         self.specifications = specifications
     }
     
-    func validate(password: String, completion: (Result<Void, TextRequirementError>) -> Void) {
+    func validate(_ text: String, completion: (Result<Void, TextRequirementError>) -> Void) {
         var foundError: TextRequirementError?
         
         for specification in specifications where foundError == nil {
-            specification.isSatisfied(password) { result in
+            specification.isSatisfied(text) { result in
                 if case .failure(let error) = result {
                     foundError = error
                 }

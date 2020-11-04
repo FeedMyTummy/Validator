@@ -8,11 +8,13 @@
 import Foundation
 
 enum TextRequirementError: Error {
-    case length(minimum: Int)
+    case minimumLength(minimum: Int)
+    case maximumLength(maximum: Int)
     case numeric
     case uppercase
     case lowercase
-    case specialCharacter
+    case specialCharacters
+    case exludeSpecialCharacters
 }
 
 protocol TextSpecification {

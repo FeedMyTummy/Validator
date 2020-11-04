@@ -10,7 +10,7 @@ import Foundation
 final class PasswordValidator {
     
     private let specifications: [TextSpecification] = [
-        LengthSpecification(minimumLength: 4),
+        MinimumLengthSpecification(minimumLength: 4),
         NumericSpecification(),
         LowercaseSpecification(),
         UppercaseSpecification(),
@@ -18,8 +18,6 @@ final class PasswordValidator {
     ]
     
     func validate(password: String, completion: (Result<Void, TextRequirementError>) -> Void) {
-        TextValidator(specifications).validate(password: password) { result in
-            completion(result)
-        }
+        TextValidator(specifications).validate(password) { completion($0) }
     }
 }

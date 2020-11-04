@@ -13,7 +13,7 @@ struct SpecialCharacterSpecification: TextSpecification {
         if NSPredicate(format: "SELF MATCHES %@", ".*[!&^%$#@()/]+.*").evaluate(with: text) {
             completion(.success(()))
         } else {
-            completion(.failure(.specialCharacter))
+            completion(.failure(.specialCharacters))
         }
     }
     

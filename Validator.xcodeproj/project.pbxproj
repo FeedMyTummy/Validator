@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84A2E16E25532C9D007B5B14 /* UsernameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2E16D25532C9D007B5B14 /* UsernameValidator.swift */; };
+		84A2E17525532E95007B5B14 /* ExcludeSpecialCharacterSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2E17425532E95007B5B14 /* ExcludeSpecialCharacterSpecification.swift */; };
 		84E5C8522551AACA00876831 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5C8512551AACA00876831 /* main.swift */; };
 		84E5C8612551AAD700876831 /* TextValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5C8592551AAD600876831 /* TextValidator.swift */; };
-		84E5C8622551AAD700876831 /* LengthSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5C85B2551AAD700876831 /* LengthSpecification.swift */; };
+		84E5C8622551AAD700876831 /* MinimumLengthSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5C85B2551AAD700876831 /* MinimumLengthSpecification.swift */; };
 		84E5C8632551AAD700876831 /* LowercaseSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5C85C2551AAD700876831 /* LowercaseSpecification.swift */; };
 		84E5C8642551AAD700876831 /* SpecialCharacterSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5C85D2551AAD700876831 /* SpecialCharacterSpecification.swift */; };
 		84E5C8652551AAD700876831 /* UppercaseSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5C85E2551AAD700876831 /* UppercaseSpecification.swift */; };
@@ -31,10 +33,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		84A2E16D25532C9D007B5B14 /* UsernameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameValidator.swift; sourceTree = "<group>"; };
+		84A2E17425532E95007B5B14 /* ExcludeSpecialCharacterSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcludeSpecialCharacterSpecification.swift; sourceTree = "<group>"; };
 		84E5C84E2551AACA00876831 /* Validator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Validator; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E5C8512551AACA00876831 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		84E5C8592551AAD600876831 /* TextValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextValidator.swift; sourceTree = "<group>"; };
-		84E5C85B2551AAD700876831 /* LengthSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LengthSpecification.swift; sourceTree = "<group>"; };
+		84E5C85B2551AAD700876831 /* MinimumLengthSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinimumLengthSpecification.swift; sourceTree = "<group>"; };
 		84E5C85C2551AAD700876831 /* LowercaseSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowercaseSpecification.swift; sourceTree = "<group>"; };
 		84E5C85D2551AAD700876831 /* SpecialCharacterSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialCharacterSpecification.swift; sourceTree = "<group>"; };
 		84E5C85E2551AAD700876831 /* UppercaseSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UppercaseSpecification.swift; sourceTree = "<group>"; };
@@ -54,6 +58,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84A2E17125532DE7007B5B14 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				84E5C86A2551AB1500876831 /* PasswordValidator.swift */,
+				84A2E16D25532C9D007B5B14 /* UsernameValidator.swift */,
+				84E5C8512551AACA00876831 /* main.swift */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
 		84E5C8452551AACA00876831 = {
 			isa = PBXGroup;
 			children = (
@@ -74,8 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				84E5C8692551AB0000876831 /* TextValidator */,
-				84E5C86A2551AB1500876831 /* PasswordValidator.swift */,
-				84E5C8512551AACA00876831 /* main.swift */,
+				84A2E17125532DE7007B5B14 /* Example */,
 			);
 			path = Validator;
 			sourceTree = "<group>";
@@ -83,11 +96,12 @@
 		84E5C85A2551AAD700876831 /* Specifications */ = {
 			isa = PBXGroup;
 			children = (
-				84E5C85B2551AAD700876831 /* LengthSpecification.swift */,
+				84E5C85B2551AAD700876831 /* MinimumLengthSpecification.swift */,
 				84E5C85C2551AAD700876831 /* LowercaseSpecification.swift */,
 				84E5C85D2551AAD700876831 /* SpecialCharacterSpecification.swift */,
 				84E5C85E2551AAD700876831 /* UppercaseSpecification.swift */,
 				84E5C85F2551AAD700876831 /* NumericSpecification.swift */,
+				84A2E17425532E95007B5B14 /* ExcludeSpecialCharacterSpecification.swift */,
 			);
 			path = Specifications;
 			sourceTree = "<group>";
@@ -163,11 +177,13 @@
 				84E5C8522551AACA00876831 /* main.swift in Sources */,
 				84E5C8632551AAD700876831 /* LowercaseSpecification.swift in Sources */,
 				84E5C8612551AAD700876831 /* TextValidator.swift in Sources */,
+				84A2E17525532E95007B5B14 /* ExcludeSpecialCharacterSpecification.swift in Sources */,
+				84A2E16E25532C9D007B5B14 /* UsernameValidator.swift in Sources */,
 				84E5C8642551AAD700876831 /* SpecialCharacterSpecification.swift in Sources */,
 				84E5C8652551AAD700876831 /* UppercaseSpecification.swift in Sources */,
 				84E5C8662551AAD700876831 /* NumericSpecification.swift in Sources */,
 				84E5C86B2551AB1500876831 /* PasswordValidator.swift in Sources */,
-				84E5C8622551AAD700876831 /* LengthSpecification.swift in Sources */,
+				84E5C8622551AAD700876831 /* MinimumLengthSpecification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
